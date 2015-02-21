@@ -1,6 +1,6 @@
 'use strict';
 
-var PabloBasagoitiRApp = require('./PabloBasagoitiRApp');
+var PabloBasagoitiApp = require('./PabloBasagoitiApp');
 var React = require('react');
 var Router = require('react-router');
 var Route = Router.Route;
@@ -8,8 +8,8 @@ var Route = Router.Route;
 var content = document.getElementById('content');
 
 var Routes = (
-  <Route handler={PabloBasagoitiRApp}>
-    <Route name="/" handler={PabloBasagoitiRApp}/>
+  <Route handler={PabloBasagoitiApp}>
+    <Route name="/" handler={PabloBasagoitiApp}/>
   </Route>
 );
 
