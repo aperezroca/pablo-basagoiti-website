@@ -1,0 +1,25 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+body {
+  font-family: sans-serif;
+  background-color: $base-color;
+}
+
+#content,
+.main {
+  height: 100%;
+}
+
+@font-face {
+  font-family: "Gryffensee Zwei";
+  src: url('/fonts/GryffenseeZwei.woff') format("woff"),
+       url('/fonts/GryffenseeZwei.otf') format("truetype");
+}

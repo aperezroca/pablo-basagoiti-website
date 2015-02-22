@@ -1,0 +1,54 @@
+.projects {
+  width: 1149px;
+  margin: auto;
+
+  .project {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    height: 290px;
+    width: 373px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:hover .caption {
+      bottom: 0px;
+    }
+
+    .caption {
+      @include transition(all .1s ease-in-out);
+      display: block;
+      position: absolute;
+      height: 75px;
+      width: 100%;
+      bottom: -75px;
+      background-color: rgba($brand-color, .7);
+      text-align: center;
+      color: white;
+      padding: 15px;
+      text-transform: uppercase;
+
+      .title, .subtitle {
+        display: block;
+        width: 100%;
+      }
+
+      .title {
+        font-size: 14px;
+        border-bottom: 1px solid;
+        padding-bottom: 8px;
+        letter-spacing: 1px;
+      }
+
+      .subtitle {
+        font-size: 12px;
+        padding-top: 8px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}

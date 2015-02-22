@@ -42,7 +42,9 @@ module.exports = {
       loader: 'react-hot!jsx-loader?harmony'
     }, {
       test: /\.scss/,
-      loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded'
+      loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded&' +
+        'includePaths[]=' +
+          (__dirname + '/bower_components/bourbon/app/assets/stylesheets')
     }, {
       test: /\.css$/,
       loader: 'style-loader!css-loader'

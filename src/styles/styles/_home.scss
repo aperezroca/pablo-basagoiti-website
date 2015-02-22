@@ -1,0 +1,100 @@
+header {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  border-bottom: 21px solid $brand-color-darker;
+
+  h1, h2 {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+  }
+
+  h1 {
+    font-family: "Gryffensee Zwei", serif;
+    font-size: 60px;
+    color: $brand-color;
+    text-transform: lowercase;
+    text-align: center;
+    margin-top: -50px;
+    height: 100px;
+    border-style: solid;
+    border-width: 1px 0;
+    line-height: 84px;
+    background-color: white;
+
+    &.fixed {
+      position: fixed;
+      top: 0;
+      margin-top: 0;
+      z-index: 10;
+      border-top: 0;
+    }
+  }
+
+  h2 {
+    font-size: 11pt;
+    color: $brand-color-darker;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 70px;
+  }
+
+  .read-more {
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    font-family: serif;
+    font-size: 12pt;
+    color: $brand-color-darker;
+    text-transform: lowercase;
+    width: 50px;
+    left: 50%;
+    margin-left: -25px;
+
+    &:before, &:after {
+      @include transform-origin(center center);
+      @include animation-duration(6s);
+      @include animation-timing-function(ease);
+      @include animation-iteration-count(infinite);
+      content: '';
+      position: absolute;
+      top: 26px;
+      width: 10px;
+      height: 2px;
+      margin-left: -4px;
+      background-color: $brand-color-darker;
+    }
+
+    &:before {
+      @include animation-name(scroll-down-left);
+      left: 50%;
+      transform: rotate(-45deg);
+    }
+
+    &:after {
+      @include animation-name(scroll-down-right);
+      right: 50%;
+      transform: rotate(45deg);
+    }
+  }
+}
+
+@include keyframes(scroll-down-left) {
+  0% { @include transform(translateY(0em) rotate(-45deg)); }
+  12% { @include transform(translateY(.75em) rotate(-45deg)); }
+  24% { @include transform(translateY(0em) rotate(-45deg)); }
+  36% { @include transform(translateY(.75em) rotate(-45deg)); }
+  48% { @include transform(translateY(0em) rotate(-45deg)); }
+  100% { @include transform(translateY(0em) rotate(-45deg)); }
+}
+
+@include keyframes(scroll-down-right) {
+  0% { @include transform(translateY(0em) rotate(45deg)); }
+  12% { @include transform(translateY(.75em) rotate(45deg)); }
+  24% { @include transform(translateY(0em) rotate(45deg)); }
+  36% { @include transform(translateY(.75em) rotate(45deg)); }
+  48% { @include transform(translateY(0em) rotate(45deg)); }
+  100% { @include transform(translateY(0em) rotate(45deg)); }
+}
