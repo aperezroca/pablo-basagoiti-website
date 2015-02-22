@@ -4,14 +4,18 @@ var React = require('react/addons');
 
 var Project = React.createClass({
   render: function() {
+    var imgStyle = {
+      width: '100%'
+    };
+
     return (
-      <li class="project">
-        <a href="#"><img src={this.props.preview} /></a>
-        <div class="caption">
-          <span class="title">{this.props.title}</span>
-          <span class="subtitle">{this.props.subtitle}</span>
+      <div className={this.props.className}>
+        <a href="#"><img src={this.props.preview} style={imgStyle} /></a>
+        <div className="caption">
+          <span className="title">{this.props.title}</span>
+          <span className="subtitle">{this.props.subtitle}</span>
         </div>
-      </li>
+      </div>
     );
   }
 });

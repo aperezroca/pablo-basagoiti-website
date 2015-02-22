@@ -1,25 +1,33 @@
 'use strict';
 
 var React = require('react/addons'),
-    Project = require('./Project.js');
+    Project = require('./Project'),
+    Grid = require('./Grid');
 
 var ProjectList = React.createClass({
   render: function() {
-    var projects = this.props.projects.map(function(project) {
-      return (
-        <Project title={project.title} subtitle={project.subtitle} preview={project.preview} />
+    var projects = [],
+        buildRow = function(project) {
+          return (
+            <Project className="grid__col-1-3"
+              title={project.title}
+              subtitle={project.subtitle}
+              preview={project.preview} />
+          );
+        };
+
+    for (var i = 0; i < this.props.projects.length; i += 3) {
+      var projectRow = this.props.projects.slice(i, i+3).map(buildRow);
+
+      projects.push(
+        <Grid>{projectRow}</Grid>
       );
-    });
+    }
 
     return (
-      <section>
-        <div className="section-title-container">
-          <h2 className="section-title">Work</h2>
-        </div>
-        <ul className="projects">
-          {projects}
-        </ul>
-      </section>
+      <div>
+        {projects}
+      </div>
     );
   }
 });

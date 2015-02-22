@@ -2,7 +2,8 @@
 
 var React = require('react/addons'),
     Hero = require('./Hero.js'),
-    ProjectList = require('./ProjectList.js');
+    ProjectList = require('./ProjectList.js'),
+    MainSection = require('./MainSection.js');
 
 // CSS
 require('../../styles/normalize.css');
@@ -26,7 +27,9 @@ var PabloBasagoitiApp = React.createClass({
     return (
       <div className='main'>
         <Hero />
-        <ProjectList projects={this.state.projects} />
+        <MainSection className="container--max-width--810" title="Work">
+          <ProjectList projects={this.state.projects} />
+        </MainSection>
       </div>
     );
   }
