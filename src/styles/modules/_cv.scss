@@ -1,0 +1,112 @@
+$year-separation-height: 150px;
+$year-label-padding: 20px;
+$year-label-font-size: 16px;
+$year-label-line-height: 1;
+$year-height: $year-separation-height + $year-label-padding*2 +
+  $year-label-font-size*$year-label-line-height;
+$month-height: $year-height/12;
+$last-year: 2015;
+
+.cv__timeline {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  line-height: $year-label-line-height;
+  font-size: $year-label-font-size;
+}
+
+.cv__timeline__year {
+  position: relative;
+  display: block;
+  padding: $year-label-padding 0;
+  margin-bottom: $year-separation-height;
+
+  &:after {
+    @include size(1px $year-separation-height);
+    position: absolute;
+    display: block;
+    content: '';
+    background-color: red;
+    left: 50%;
+    bottom: -$year-separation-height;
+  }
+}
+
+.cv__column {
+  position: absolute;
+  list-style-type: none;
+  width: 50%;
+  margin-top: $year-label-padding;
+}
+
+.cv__column__year {
+  list-style-type: none;
+  position: absolute;
+  right: 0;
+  width: 100%;
+}
+
+@for $year from 2008 through $last-year {
+  .cv__column__year--#{$year} {
+    top: $year-height*($last-year - $year);
+  }
+}
+
+.cv__column--left {
+  text-align: right;
+  right: 50%;
+}
+
+.cv__column--right {
+  text-align: left;
+  left: 50%;
+}
+
+.cv__column__item {
+  position: absolute;
+  padding-left: 60px;
+  padding-right: 60px;
+
+  &:after {
+    width: 8px;
+    content: '';
+    position: absolute;
+    background-color: red;
+    top: 0;
+  }
+
+  .cv__column--left &::after {
+    right: 40px;
+  }
+
+  .cv__column--right &::after {
+    left: 40px;
+  }
+
+  .cv__column--left & {
+    right: 0;
+  }
+
+  .cv__column--right & {
+    left: 0;
+  }
+}
+
+.cv__column__item--jan { top: $month-height*0; }
+.cv__column__item--feb { top: $month-height*1; }
+.cv__column__item--mar { top: $month-height*2; }
+.cv__column__item--apr { top: $month-height*3; }
+.cv__column__item--jun { top: $month-height*4; }
+.cv__column__item--jul { top: $month-height*5; }
+.cv__column__item--aug { top: $month-height*6; }
+.cv__column__item--sep { top: $month-height*7; }
+.cv__column__item--oct { top: $month-height*8; }
+.cv__column__item--nov { top: $month-height*9; }
+.cv__column__item--dec { top: $month-height*10; }
+
+@for $month from 1 through 48 {
+  .cv__column__item--#{$month}-months-duration::after {
+    height: $month-height * $month;
+  }
+}

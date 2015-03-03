@@ -30,6 +30,52 @@ var PabloBasagoitiApp = React.createClass({
         <MainSection className="container--max-width--810" title="Work">
           <ProjectList projects={this.state.projects} />
         </MainSection>
+        <MainSection title="Curriculum">
+          <ul className="cv__column cv__column--left">
+            <ul className="cv__column__year cv__column__year--2015">
+              <li className="cv__column__item cv__column__item--jan cv__column__item--10-months-duration">
+                <span>10 meses</span>
+                <h3>HTML5 & CSS3</h3>
+                <span>Curso de introducción al diseño web con HTML5 y CSS3</span>
+                <p>Curso impartido por Seis Cocos realizado para desarrollar y diseñar sitios web con un alto nivel estético basándose en los nuevos lenguajes de diseño web.</p>
+              </li>
+            </ul>
+            <ul className="cv__column__year cv__column__year--2014">
+              <li className="cv__column__item cv__column__item--10-months-duration">
+                <span>10 meses</span>
+                <h3>HTML5 & CSS3</h3>
+                <span>Curso de introducción al diseño web con HTML5 y CSS3</span>
+                <p>Curso impartido por Seis Cocos realizado para desarrollar y diseñar sitios web con un alto nivel estético basándose en los nuevos lenguajes de diseño web.</p>
+              </li>
+            </ul>
+            <ul className="cv__column__year cv__column__year--2013">
+              <li className="cv__column__item cv__column__item--10-months-duration">
+                <span>10 meses</span>
+                <h3>HTML5 & CSS3</h3>
+                <span>Curso de introducción al diseño web con HTML5 y CSS3</span>
+                <p>Curso impartido por Seis Cocos realizado para desarrollar y diseñar sitios web con un alto nivel estético basándose en los nuevos lenguajes de diseño web.</p>
+              </li>
+            </ul>
+          </ul>
+          <ul className="cv__column cv__column--right">
+            <li className="cv__column__item cv__column__item--5-months-duration">
+              <span>5 meses</span>
+              <h3>HTML5 & CSS3</h3>
+              <span>Curso de introducción al diseño web con HTML5 y CSS3</span>
+              <p>Curso impartido por Seis Cocos realizado para desarrollar y diseñar sitios web con un alto nivel estético basándose en los nuevos lenguajes de diseño web.</p>
+            </li>
+          </ul>
+          <ul className="cv__timeline">
+            <li className="cv__timeline__year">2015</li>
+            <li className="cv__timeline__year">2014</li>
+            <li className="cv__timeline__year">2013</li>
+            <li className="cv__timeline__year">2012</li>
+            <li className="cv__timeline__year">2011</li>
+            <li className="cv__timeline__year">2010</li>
+            <li className="cv__timeline__year">2009</li>
+            <li className="cv__timeline__year">2008</li>
+          </ul>
+        </MainSection>
       </div>
     );
   }
