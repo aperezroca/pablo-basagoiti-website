@@ -56,6 +56,14 @@ var PabloBasagoitiApp = React.createClass({
                 <p>Curso impartido por Seis Cocos realizado para desarrollar y diseñar sitios web con un alto nivel estético basándose en los nuevos lenguajes de diseño web.</p>
               </li>
             </ul>
+            <ul className="cv__column__year cv__column__year--2012">
+              <li className="cv__column__item cv__column__item cv__column__item--10-months-duration">
+                <span>10 meses</span>
+                <h3>Nuevo item</h3>
+                <span>Curso de introducción al diseño web con HTML5 y CSS3</span>
+                <p>Curso impartido por Seis Cocos realizado para desarrollar y diseñar sitios web con un alto nivel estético basándose en los nuevos lenguajes de diseño web.</p>
+              </li>
+            </ul>
           </ul>
           <ul className="cv__column cv__column--right">
             <li className="cv__column__item cv__column__item--5-months-duration">
