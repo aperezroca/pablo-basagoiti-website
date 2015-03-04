@@ -36,7 +36,7 @@
     "grunt-open": "~0.2.3",
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-clean": "~0.6.0",
-    "sass-loader": "^0.3.1",
+    "sass-loader": "git://github.com/jtangelder/sass-loader.git#a1048b9d11f4f264342b6a980bb9a568d3e151f0",
     "react-hot-loader": "^1.0.7"
   }
 }

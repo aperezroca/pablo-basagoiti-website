@@ -68,7 +68,7 @@ $last-year: 2015;
   padding-left: 60px;
   padding-right: 60px;
 
-  &:after {
+  &::after {
     width: 8px;
     content: '';
     position: absolute;
@@ -93,6 +93,27 @@ $last-year: 2015;
   }
 }
 
+.cv__column__item--pulled {
+  &::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 70px;
+    top: 1px;
+    right: -30px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .cv__column--left & {
+    right: 30px;
+  }
+
+  .cv__column--right & {
+    left: 30px;
+  }
+}
+
 .cv__column__item--jan { top: $month-height*0; }
 .cv__column__item--feb { top: $month-height*1; }
 .cv__column__item--mar { top: $month-height*2; }
@@ -108,5 +129,9 @@ $last-year: 2015;
 @for $month from 1 through 48 {
   .cv__column__item--#{$month}-months-duration::after {
     height: $month-height * $month;
+  }
+
+  .cv__column__item--#{$month}-months-duration::before {
+    height: $month-height * $month - 2px;
   }
 }

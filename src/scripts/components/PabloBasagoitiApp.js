@@ -41,15 +41,15 @@ var PabloBasagoitiApp = React.createClass({
               </li>
             </ul>
             <ul className="cv__column__year cv__column__year--2014">
-              <li className="cv__column__item cv__column__item--10-months-duration">
-                <span>10 meses</span>
+              <li className="cv__column__item cv__column__item--20-months-duration">
+                <span>20 meses</span>
                 <h3>HTML5 & CSS3</h3>
                 <span>Curso de introducción al diseño web con HTML5 y CSS3</span>
                 <p>Curso impartido por Seis Cocos realizado para desarrollar y diseñar sitios web con un alto nivel estético basándose en los nuevos lenguajes de diseño web.</p>
               </li>
             </ul>
             <ul className="cv__column__year cv__column__year--2013">
-              <li className="cv__column__item cv__column__item--10-months-duration">
+              <li className="cv__column__item cv__column__item--pulled cv__column__item--10-months-duration">
                 <span>10 meses</span>
                 <h3>HTML5 & CSS3</h3>
                 <span>Curso de introducción al diseño web con HTML5 y CSS3</span>
