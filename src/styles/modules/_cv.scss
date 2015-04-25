@@ -118,13 +118,14 @@ $pulled-item-padding: 30px;
 .cv__column__item--feb { top: $month-height*1; }
 .cv__column__item--mar { top: $month-height*2; }
 .cv__column__item--apr { top: $month-height*3; }
-.cv__column__item--jun { top: $month-height*4; }
-.cv__column__item--jul { top: $month-height*5; }
-.cv__column__item--aug { top: $month-height*6; }
-.cv__column__item--sep { top: $month-height*7; }
-.cv__column__item--oct { top: $month-height*8; }
-.cv__column__item--nov { top: $month-height*9; }
-.cv__column__item--dec { top: $month-height*10; }
+.cv__column__item--may { top: $month-height*4; }
+.cv__column__item--jun { top: $month-height*5; }
+.cv__column__item--jul { top: $month-height*6; }
+.cv__column__item--aug { top: $month-height*7; }
+.cv__column__item--sep { top: $month-height*8; }
+.cv__column__item--oct { top: $month-height*9; }
+.cv__column__item--nov { top: $month-height*10; }
+.cv__column__item--dec { top: $month-height*11; }
 
 @for $month from 1 through 48 {
   .cv__column__item--#{$month}-months-duration::after {
