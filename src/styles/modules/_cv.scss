@@ -1,5 +1,5 @@
-$year-separation-height: 150px;
-$year-label-padding: 20px;
+$year-separation-height: 80px;
+$year-label-padding: 30px;
 $year-label-font-size: 16px;
 $year-label-line-height: 1;
 $year-height: $year-separation-height + $year-label-padding*2 +
@@ -70,7 +70,7 @@ $pulled-item-padding: 30px;
   padding-right: 60px;
 
   &::after {
-    width: 8px;
+    width: 6px;
     content: '';
     position: absolute;
     background-color: red;
