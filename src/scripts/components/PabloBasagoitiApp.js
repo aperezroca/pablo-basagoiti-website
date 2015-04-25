@@ -25,12 +25,48 @@ var PROJECTS = [
   education: {
     2015: [
       {
-        startMonth: 'jun',
-        duration: 6,
+        startMonth: 'may',
+        duration: 3,
         title: 'HTML5 & CSS3',
         subtitle: 'Curso de introducción al diseño web con HTML5 y CSS3',
-        description: 'Curso impartido por Seis Cocos realizado para desarrollar y diseñar sitios web con un alto nivel estético basándose en los nuevos lenguajes de diseño web.',
-        pulled: false
+        description: 'This is a lot of crap',
+      }
+    ],
+    2014: [
+      {
+        startMonth: 'aug',
+        duration: 12,
+        title: 'Editorial design master',
+        subtitle: 'Máster en Diseño Editorial y Publicaciones Digitales',
+        description: 'This is a lot of crap'
+      }
+    ],
+    2013: [
+      {
+        startMonth: 'sep',
+        duration: 48,
+        title: 'Publicidad y relaciones públicas',
+        subtitle: 'Licenciatura de Publicidad y RRPP por la UMA',
+        description: 'This is a lot of crap'
+      }
+    ],
+    2010: [
+      {
+        startMonth: 'mar',
+        duration: 12,
+        title: 'Curso diseño fráfico publicitario',
+        subtitle: 'Introducción al diseño gráfico',
+        description: 'This is a lot of crap',
+        pulled: true
+      }
+    ],
+    2009: [
+      {
+        startMonth: 'sep',
+        duration: 24,
+        title: 'Técnico superior en realización de vídeo',
+        subtitle: 'Grado Superior en Realización de Vídeos y espectáctulos',
+        description: 'This is a lot of crap'
       }
     ]
   },
