@@ -128,11 +128,10 @@ $pulled-item-padding: 30px;
 .cv__column__item--dec { top: $month-height*11; }
 
 @for $month from 1 through 48 {
+  .cv__column__item--#{$month}-months-duration::before,
   .cv__column__item--#{$month}-months-duration::after {
-    height: $month-height * $month;
-  }
-
-  .cv__column__item--#{$month}-months-duration::before {
-    height: $month-height * $month;
+    height: calc(#{$month-height * $month - 4px});
+    margin-top: 2px;
+    margin-bottom: 2px;
   }
 }
