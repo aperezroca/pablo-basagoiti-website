@@ -54,12 +54,12 @@ $pulled-item-padding: 30px;
   }
 }
 
-.cv__column--left {
+.cv__column--education {
   text-align: right;
   right: 50%;
 }
 
-.cv__column--right {
+.cv__column--experience {
   text-align: left;
   left: 50%;
 }
@@ -77,19 +77,19 @@ $pulled-item-padding: 30px;
     top: 0;
   }
 
-  .cv__column--left &::after {
+  .cv__column--education &::after {
     right: 40px;
   }
 
-  .cv__column--right &::after {
+  .cv__column--experience &::after {
     left: 40px;
   }
 
-  .cv__column--left & {
+  .cv__column--education & {
     right: 0;
   }
 
-  .cv__column--right & {
+  .cv__column--experience & {
     left: 0;
   }
 }
@@ -101,15 +101,15 @@ $pulled-item-padding: 30px;
     content: '';
     width: 70px;
     right: -30px;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    border-top: 1px solid red;
+    border-bottom: 1px solid red;
   }
 
-  .cv__column--left & {
+  .cv__column--education & {
     right: $pulled-item-padding;
   }
 
-  .cv__column--right & {
+  .cv__column--experience & {
     left: $pulled-item-padding;
   }
 }
