@@ -7,9 +7,10 @@ var React = require('react/addons'),
 var ProjectList = React.createClass({
   render: function() {
     var projects = [],
-        buildRow = function(project) {
+        buildRow = function(project, index) {
           return (
-            <Project className="grid__col-1-3"
+            <Project key={index}
+              className="grid__col-1-3"
               title={project.title}
               subtitle={project.subtitle}
               preview={project.preview} />
@@ -20,7 +21,7 @@ var ProjectList = React.createClass({
       var projectRow = this.props.projects.slice(i, i+3).map(buildRow);
 
       projects.push(
-        <Grid>{projectRow}</Grid>
+        <Grid key={i}>{projectRow}</Grid>
       );
     }
 
