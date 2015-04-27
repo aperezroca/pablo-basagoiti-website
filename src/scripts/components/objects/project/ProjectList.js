@@ -1,8 +1,8 @@
 'use strict';
 
 var React = require('react/addons'),
-    Project = require('./Project'),
-    Grid = require('./Grid');
+    Project = require('objects/project/Project'),
+    Grid = require('objects/Grid');
 
 var ProjectList = React.createClass({
   render: function() {

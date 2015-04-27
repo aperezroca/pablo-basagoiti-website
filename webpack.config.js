@@ -28,7 +28,8 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['', '.js'],
+    modulesDirectories: [ 'web_modules', 'node_modules', 'components', 'styles' ]
   },
   module: {
     preLoaders: [{
@@ -44,7 +45,9 @@ module.exports = {
       test: /\.scss/,
       loader: 'style-loader!css-loader!sass-loader?outputStyle=expanded&' +
         'includePaths[]=' +
-          (__dirname + '/bower_components/bourbon/app/assets/stylesheets')
+          'bower_components/bourbon/app/assets/stylesheets' + '&' +
+        'includePaths[]=' +
+          'src/styles'
     }, {
       test: /\.css$/,
       loader: 'style-loader!css-loader'

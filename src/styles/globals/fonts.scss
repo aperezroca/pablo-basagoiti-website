@@ -1,0 +1,6 @@
+@import "bourbon";
+
+@font-face {
+  @include font-face("stone-informal", "/fonts/StoneInformalStd-Medium");
+  //@include font-face("stone-informal", "/fonts/StoneInformalStd-MediumItal", normal, italic);
+}

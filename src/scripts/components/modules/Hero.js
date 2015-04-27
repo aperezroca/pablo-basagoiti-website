@@ -2,6 +2,9 @@
 
 var React = require('react/addons');
 
+// CSS
+require('modules/hero.scss');
+
 var Hero = React.createClass({
   render: function() {
     return (

@@ -1,3 +1,5 @@
+@import "config";
+
 *, *:after, *:before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -15,23 +17,11 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "stone-informal", sans-serif;
   background-color: $base-color;
 }
 
 #content,
 .main {
   height: 100%;
-}
-
-.container--max-width--810 {
-  max-width: 810px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@font-face {
-  font-family: "Gryffensee Zwei";
-  src: url('/fonts/GryffenseeZwei.woff') format("woff"),
-       url('/fonts/GryffenseeZwei.otf') format("truetype");
 }

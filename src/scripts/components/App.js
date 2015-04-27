@@ -1,15 +1,16 @@
 'use strict';
 
 var React = require('react/addons'),
-    Hero = require('./Hero.js'),
-    ProjectList = require('./ProjectList.js'),
-    MainSection = require('./MainSection.js'),
-    CVItem = require('./CVItem.js'),
-    CVYear = require('./CVYear.js');
+    Hero = require('modules/Hero.js'),
+    MainSection = require('modules/MainSection.js'),
+    ProjectList = require('objects/project/ProjectList.js'),
+    CVItem = require('objects/cv/CVItem.js'),
+    CVYear = require('objects/cv/CVYear.js');
 
 // CSS
-require('../../styles/normalize.css');
-require('../../styles/main.scss');
+require('vendor/normalize.css');
+require('globals/fonts.scss');
+require('default.scss');
 
 var PROJECTS = [
   { title: 'Title 1', subtitle: 'Subtitle 1', preview: 'http://placehold.it/250x250' },
@@ -52,7 +53,7 @@ var PROJECTS = [
     ],
     2010: [
       {
-        startMonth: 'mar',
+        startMonth: 'jan',
         duration: 12,
         title: 'Curso diseño fráfico publicitario',
         subtitle: 'Introducción al diseño gráfico',
@@ -84,7 +85,7 @@ var PROJECTS = [
   }
 };
 
-var PabloBasagoitiApp = React.createClass({
+var App = React.createClass({
   buildItems: function(years) {
     return Object.keys(years).map(function(year, index) {
       var items = years[year].map(function(item, index) {
@@ -107,7 +108,7 @@ var PabloBasagoitiApp = React.createClass({
     return (
       <div className='main'>
         <Hero />
-        <MainSection className="container--max-width--810" title="Work">
+        <MainSection title="Work">
           <ProjectList projects={PROJECTS} />
         </MainSection>
         <MainSection title="Curriculum">
@@ -134,4 +135,4 @@ var PabloBasagoitiApp = React.createClass({
   }
 });
 
-module.exports = PabloBasagoitiApp;
+module.exports = App;

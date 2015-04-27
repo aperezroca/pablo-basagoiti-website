@@ -1,0 +1,37 @@
+@import "bourbon";
+@import "config";
+
+$main-section__max-width: 810px;
+
+.main-section__main-container {
+  max-width: $main-section__max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-section__title-container {
+  position: relative;
+  text-align: center;
+  margin-bottom: 100px;
+  margin-top: 180px;
+}
+
+.main-section__title {
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  text-transform: uppercase;
+  color: $brand-color-darker;
+  font-size: 0.8em;
+  background-color: $base-color;
+  padding: 0 10px;
+
+  &:before {
+    @include size(100% 1px);
+    left: 0;
+    top: 50%;
+    content: '';
+    position: absolute;
+    background-color: $brand-color-darker;
+    z-index: -1;
+  }
+}

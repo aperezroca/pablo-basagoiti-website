@@ -1,3 +1,6 @@
+@import "bourbon";
+@import "config";
+
 .hero {
   height: 100%;
   width: 100%;
@@ -11,7 +14,7 @@
   }
 
   .hero__title {
-    font-family: "Gryffensee Zwei", serif;
+    font-family: "stone-informal", serif;
     font-size: 60px;
     color: $brand-color;
     text-transform: lowercase;

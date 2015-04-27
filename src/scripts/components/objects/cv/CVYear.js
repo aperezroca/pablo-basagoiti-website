@@ -2,6 +2,9 @@
 
 var React = require('react/addons');
 
+// CSS
+require('objects/cv.scss');
+
 var CVYear = React.createClass({
   render: function() {
     var classNames = [
